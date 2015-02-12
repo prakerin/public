@@ -23,6 +23,29 @@ require '../../proses/fungsi.php';
               }
 
            ?>
+
+           <!-- Keterangan Delete -->
+
+           <?php 
+
+              if(!empty($_GET['delete']))
+              {
+                if($_GET['delete'] == '1')
+                {
+                    echo "<script language=\"Javascript\">\n";
+                    echo "confirmed = window.alert('Username berhasil di delete!');";
+                    echo "</script>";
+                }
+                else if($_GET['delete'] == '2')
+                {
+                    echo "<script language=\"Javascript\">\n";
+                    echo "window.alert('deleted');";
+                    echo "</script>";
+                    
+                }
+              }
+
+           ?>
 <html>
 <head>
 	<title>Inven</title>

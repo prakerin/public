@@ -123,7 +123,7 @@ $tampil = mysql_query("SELECT * FROM user WHERE tipe = 'siswa'");
         <td>
           <span class='glyphicon glyphicon-edit' style='color:grey;'></span>
           &nbsp; &nbsp;
-          <span class='glyphicon glyphicon-remove' style='color:red;'></span>
+          <a href='../../proses/deleteUser.php?id=$row[0]'><span class='glyphicon glyphicon-remove' style='color:red;'></span></a>
         </td>
       </tr>";
     }
