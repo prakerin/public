@@ -200,4 +200,53 @@ function info_user(){
     ";
 }
 
+function alamat() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['ALAMAT'];
+}
+
+function jeniskelamin() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['JENIS_KELAMIN'];
+}
+
+function background() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['BACKGROUND'];
+}
+
+function nomorhp() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['NO_TELPON'];
+}
+
+function username() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['USERNAME'];
+}
+
+function password() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+echo $data['PASSWORD'];
+}
+
+function backgroundedit() {
+$nama = $_SESSION['nama'];
+$result=mysql_query("select * from user where nama='$nama'") or die(mysql_error());
+$data=mysql_fetch_array($result);
+$back = $data['BACKGROUND'];
+echo substr($back, 1);
+}
  ?>
