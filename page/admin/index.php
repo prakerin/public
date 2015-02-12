@@ -26,6 +26,29 @@ require '../../proses/fungsi.php';
 
            ?>
 
+           <!-- Keterangan Delete -->
+
+           <?php 
+
+              if(!empty($_GET['delete']))
+              {
+                if($_GET['delete'] == '1')
+                {
+                    echo "<script language=\"Javascript\">\n";
+                    echo "confirmed = window.alert('Barang berhasil di delete!');";
+                    echo "</script>";
+                }
+                else if($_GET['delete'] == '2')
+                {
+                    echo "<script language=\"Javascript\">\n";
+                    echo "window.alert('deleted');";
+                    echo "</script>";
+                    
+                }
+              }
+
+           ?>
+
 
 <html>
 <head>
@@ -68,7 +91,7 @@ require '../../proses/fungsi.php';
         <p style='color:grey;font-size:16px;'>  <?php session_start(); echo $_SESSION['nama']; ?>  <span class="caret"></span></p>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pengaturan</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php">Pengaturan</a></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="../../proses/logout.php">Logout</a></li>
         </ul>
         </div>

@@ -129,6 +129,11 @@ $tampil = mysql_query("SELECT * FROM user WHERE tipe = 'siswa'");
     }
 }
 
+/* function pilihan(){
+                    echo "<script language=\"Javascript\">\n";
+                    echo "window.alert('Gagal mengiput data!');";
+                    echo "</script>";
+}*/
 
 function list_barang()
 {
@@ -151,7 +156,7 @@ function list_barang()
         <td>
           <span class='glyphicon glyphicon-edit' style='color:grey;'></span>
           &nbsp; &nbsp;
-          <span class='glyphicon glyphicon-remove' style='color:red;'></span>
+          <a href='../../proses/delete.php?id=$row[0]'> <span class='glyphicon glyphicon-remove' style='color:red;'></span></a>
         </td>
       </tr>
       		";

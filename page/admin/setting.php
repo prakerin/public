@@ -43,7 +43,7 @@ require '../../proses/fungsi.php';
         <p style='color:grey;font-size:16px;'> <?php name(); ?> <span class="caret"></span></p>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pengaturan</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php">Pengaturan</a></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="../../proses/logout.php">Logout</a></li>
         </ul>
         </div>
