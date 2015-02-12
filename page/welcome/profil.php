@@ -1,6 +1,7 @@
 <!-- autentikasi -->
 <?php 
 include("../../proses/cek.php");
+require('../../proses/fungsi.php');
  ?>
 
 <html>
@@ -18,7 +19,7 @@ include("../../proses/cek.php");
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="../../js/bootstrap.min.js"></script>
 </head>
-<body style='background:#1BBC9B;'>
+<body style="background:<?php background(); ?>;">
 <div class="navbar">
       <center><img src='../../img/logo.png' height='60px'><a href="#help" id="login_pop"><span class='glyphicon glyphicon-question-sign'></span></a></center>
 </div>
@@ -73,8 +74,8 @@ include("../../proses/cek.php");
 <div class='container'>
 	<div class='col-md-10 col-md-offset-1' style='padding:0;background:white;box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);'>
 		<div class='col-md-2' style='padding:0;'><img src="<?php echo $_SESSION['foto']; ?>" height='200' width='158'></div>
-		<div class='col-md-6' style='background:#2F74A3;'><h1 style='color:white;'><center>  <?php echo $_SESSION['nama']; ?>  </h1></center><br></div>
-		<div class='col-md-4' style='background:#266997;'><h1 style="color:white;"><center>  <?php echo $_SESSION['kelas']; ?>  </center></h1><br></div>
+		<div class='col-md-6' style='background:#2F74A3;'><h1 style='color:white;text-transform:capitalize;'><center>  <?php echo $_SESSION['nama']; ?>  </h1></center><br></div>
+		<div class='col-md-4' style='background:#266997;'><h1 style="color:white;text-transform:capitalize;"><center>  <?php echo $_SESSION['kelas']; ?>  </center></h1><br></div>
 		<a href="pinjam.php"><div class='col-md-2' style='padding:0;'>
 			<div class='pinjam'>
 			</div>
@@ -105,15 +106,15 @@ include("../../proses/cek.php");
 			<center><h1>Info profilku</h1></center>
 			<hr style='width:100px;border:1px solid #d4d4d4;'>
 			<div class='col-md-6'>
-				<div class='bigprofil'>
+				<div class='bigprofil' style='text-transform:capitalize;'>
 					<br><center><img src='<?php echo $_SESSION['foto']; ?>' height='200' width='200' style='border-radius:50%;border:2px solid white;'>
-					<h2> Ananda Prameswari Putri</h2> 
-					<h3> XI RPL B </h3>
+					<h2> <?php echo $_SESSION['nama']; ?></h2> 
+					<h3> <?php echo $_SESSION['kelas']; ?> </h3>				
 					<hr style='width:100px;border:1px solid #d4d4d4;'>
-					<h4> Padalarang </h4>
-					<h4> Perempuan </h4>
+					<h4> <?php alamat(); ?> </h4>
+					<h4> <?php jeniskelamin(); ?> </h4>
 					<h4> 14 Kali meminjam barang </h4><br>
-					<a href='#' class='glyphicon glyphicon-pencil' style='font-size:20px;'></a><br>.
+					<a href='edit.php' class='glyphicon glyphicon-pencil' style='font-size:20px;'></a><br>.
 					</center>
 				</div>
 			</div>

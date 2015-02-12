@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<title>E-nvent | Beranda</title>
@@ -13,12 +14,14 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="../../js/bootstrap.min.js"></script>
 </head>
-<body style='background:#1BBC9B;'>
-
 <!-- autentikasi -->
 <?php 
 include("../../proses/cek.php");
+require('../../proses/fungsi.php');
  ?>
+<body style='background:<?php background(); ?>;'>
+
+
 
 <div class="navbar">
       <center><img src='../../img/logo.png' height='60px'><a href="#help" id="login_pop"><span class='glyphicon glyphicon-question-sign'></span></a></center>
@@ -74,8 +77,8 @@ include("../../proses/cek.php");
 <div class='container'>
 	<div class='col-md-10 col-md-offset-1' style='padding:0;background:white;box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);'>
 		<div class='col-md-2' style='padding:0;'><img src="<?php echo $_SESSION['foto']; ?>" height='150' width='158'></div>
-		<div class='col-md-6' style='background:#2F74A3;'><h1 style='color:white;'><center>  <?php echo $_SESSION['nama']; ?>  </h1></center><br></div>
-		<div class='col-md-4' style='background:#266997;'><h1 style="color:white;"><center>  <?php echo $_SESSION['kelas']; ?>  </center></h1><br></div>
+		<div class='col-md-6' style='background:#2F74A3;'><h1 style='color:white;text-transform:capitalize;'><center>  <?php echo $_SESSION['nama']; ?>  </h1></center><br></div>
+		<div class='col-md-4' style='background:#266997;'><h1 style="color:white;text-transform:capitalize;"><center>  <?php echo $_SESSION['kelas']; ?>  </center></h1><br></div>
 		<a href="pinjam.php"><div class='col-md-2' style='padding:0;'>
 			<div class='pinjam'>
 			</div>
